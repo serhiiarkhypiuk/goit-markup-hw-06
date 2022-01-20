@@ -367,14 +367,30 @@ button {
   min-height: 581px;
   background-color: var(--main-backgroung);
   border-radius: 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
   transition: transform 500ms;
+  padding: 40px;
+  text-align: center;
 }
 
-.modal-close {
+.modal .form .header {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 1.15;
+  color: var(--main-text-color);
+  border: none;
+  margin-bottom: 12px;
+}
+
+.modal .form {
+}
+
+.modal .modal-close {
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -388,7 +404,7 @@ button {
   right: 8px;
 }
 
-.close-icon {
+.modal .close-icon {
   fill: var(--main-text-color);
   width: 18px;
   height: 18px;
@@ -398,6 +414,92 @@ button {
   opacity: 0.5;
   pointer-events: none;
   visibility: hidden;
+}
+
+.modal .form .field label {
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: var(--secondary-text-color);
+  margin-bottom: 4px;
+  display: flex;
+}
+
+.modal .form .field {
+  margin-bottom: 10px;
+  position: relative;
+  border: solid 2px red;
+}
+
+.modal .form .field .modal-icon {
+  display: inline-block;
+  position: absolute;
+  top: 11px;
+  left: 12px;
+  transform: translateY(100%);
+}
+
+.modal .form .field input:focus {
+  border-color: var(--accent-text-color);
+  outline: none;
+}
+
+.modal .form .field textarea:focus {
+  border-color: var(--accent-text-color);
+  outline: none;
+}
+
+.modal .form .field input:focus ~ .modal-icon {
+  fill: var(--accent-text-color);
+}
+
+.modal .form .field textarea {
+  border-radius: 4px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  margin: 0px;
+  display: inline-block;
+  position: relative;
+  padding: 12px 16px;
+  height: 120px;
+  width: 100%;
+  resize: none;
+}
+
+.modal .form .field input {
+  height: 40px;
+  width: 100%;
+  margin: 0px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  position: relative;
+  padding-top: 12px;
+  padding-right: 12px;
+  padding-bottom: 12px;
+  padding-left: 42px;
+}
+
+.modal .form .agreementlink {
+  color: var(--accent-text-color);
+}
+
+.modal .form .button {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  background: var(--accent-text-color);
+  border: none;
+  border-radius: 4px;
+  color: var(--main-backgroung);
+  padding: 10px 55px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+.modal .form .button:hover,
+.modal .form .button:focus {
+  background-color: #188ce8;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
 /* -------------------------------------------------- */
 

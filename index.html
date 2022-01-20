@@ -396,10 +396,44 @@
                     <use href="./images/sprite.svg#icon-close" />
                 </svg>
             </button>
-            <!-- <input type="text" />
-            <input type="text" />
-            <input type="text" />
-            <input type="text" /> -->
+            <form class="form" action="#" autocomplete="on" novalidate>
+                <h2 class="header">Оставьте свои данные, мы вам перезвоним</h2>
+                <div class="field">
+                    <label for="name">Имя</label>
+                    <input class="name" type="text" name="name" id="name"/>
+                    <svg class="person-icon modal-icon" width="18px" height=18px>
+                        <use href="./images/sprite.svg#icon-person-black"></use>
+                    </svg>
+                </div>
+                
+                <div class="field">
+                    <label for="tel">Телефон</label>
+                    <input class="telephone" type="text" name="tel" id="tel"/>
+                    <svg class="phone-icon modal-icon" width="18px" height=18px>
+                        <use href="./images/sprite.svg#icon-phone-black"></use>
+                    </svg>
+                </div>
+
+                <div class="field">
+                    <label for="email">Почта</label>
+                    <input class="email" type="text" name="email" id="email" />
+                    <svg class="email-icon modal-icon" width="18px" height=18px>
+                        <use href="./images/sprite.svg#icon-email-black"></use>
+                    </svg>
+                </div>
+
+                <div class="field">
+                    <label for="comment">Комментарий</label>
+                    <textarea class="comment" type="text" name="comment" id="comment" placeholder="Введите текст" /></textarea>
+                </div>
+
+                <div class="field agreement">
+                    <input type="checkbox" name="agreement" value="agree" class="visually-hidden"/>Соглашаюсь с рассылкой и принимаю <a href="#" target="_blank" class="agreementlink" rel="noreferrer noopener">Условия договора</a>
+                </div>
+
+                <button type="submit" class="button">Отправить</button>
+
+            </form>
         </div>
     </div>
 
